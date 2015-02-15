@@ -1,7 +1,7 @@
 import webapp2
 import itertools
 import random
-from games import GameModel
+from model.game import GameModel
 
 class MainPage(webapp2.RequestHandler):
 
@@ -29,7 +29,8 @@ class GameHandler(webapp2.RequestHandler):
 			deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
 			random.shuffle(deck)
 
-	def respond(self, data, content_type='application/json')
+			# Deal hands out
+			#player_one 
 
 application = webapp2.WSGIApplication([
 	('/game/\w+/draw/\w+', DrawCardHandler),
